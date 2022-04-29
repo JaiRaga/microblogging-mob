@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     // flexWrap: "wrap",
     padding: 10,
     borderBottomWidth: 0.6,
-    borderBottomColor: "grey",
+    borderBottomColor: "lightgrey",
     // backgroundColor: "blue"
   }
 });
