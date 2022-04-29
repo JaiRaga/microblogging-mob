@@ -2,10 +2,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Entypo, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import Home from "../components/Home";
-import Search from "../components/Search";
-import Notification from "../components/Notification";
-import Messages from "../components/Messages";
+import HomeScreen from "../screen/HomeScreen";
+import SearchScreen from "../screen/SearchScreen";
+import NotificationScreen from "../screen/NotificationScreen";
+import MessagesScreen from "../screen/MessagesScreen";
 import ProfilePicture from "../components/ProfilePicture/ProfilePicture";
 
 const BottomTab = createBottomTabNavigator();
@@ -21,7 +21,7 @@ export default function BottomTabNavigation() {
     >
       <BottomTab.Screen
         name="Home"
-        component={Home}
+        component={HomeScreen}
         options={{
           headerTitle: () => (
             <Ionicons name="logo-twitter" size={30} color={Colors.light.tint} />
@@ -30,15 +30,15 @@ export default function BottomTabNavigation() {
           headerLeftContainerStyle: {
             marginLeft: 15,
           },
+          headerRightContainerStyle: {
+            marginRight: 15,
+          },
           headerLeft: () => (
             <ProfilePicture
               size={40}
               image="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg"
             />
           ),
-          headerRightContainerStyle: {
-            marginRight: 15,
-          },
           headerRight: () => (
             <MaterialCommunityIcons
               name="star-four-points-outline"
@@ -53,7 +53,7 @@ export default function BottomTabNavigation() {
       />
       <BottomTab.Screen
         name="Search"
-        component={Search}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="ios-search" size={24} color={color} />
@@ -62,7 +62,7 @@ export default function BottomTabNavigation() {
       />
       <BottomTab.Screen
         name="Notification"
-        component={Notification}
+        component={NotificationScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons
@@ -75,7 +75,7 @@ export default function BottomTabNavigation() {
       />
       <BottomTab.Screen
         name="Messages"
-        component={Messages}
+        component={MessagesScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Ionicons name="ios-mail" size={24} color={color} />
