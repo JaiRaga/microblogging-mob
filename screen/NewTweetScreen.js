@@ -7,6 +7,7 @@ import {
   TextInput,
 } from "react-native";
 import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import { TouchableOpacity } from "react-native";
@@ -16,14 +17,20 @@ const NewTweetScreen = () => {
   const [tweet, setTweet] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
+  const navigation = useNavigation()
+
   const onPostTweet = () => {
     console.warn(`Posting ${tweet} and image ${imageUrl}`);
   };
 
+  const onClose = () => {
+    navigation.goBack()
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
-        <AntDesign name="close" size={30} color={Colors.light.tint} />
+        <AntDesign name="close" size={30} color={Colors.light.tint} onPress={onClose} />
         <TouchableOpacity style={styles.button} onPress={onPostTweet}>
           <Text style={styles.buttonText}>Tweet</Text>
         </TouchableOpacity>
@@ -35,13 +42,14 @@ const NewTweetScreen = () => {
             value={tweet}
             onChangeText={setTweet}
             multiline={true}
-            numberOfLines={3}
+            numberOfLines={2}
             style={styles.tweetInput}
             placeholder="What's happening?"
           />
           <TextInput
             value={imageUrl}
             onChangeText={setImageUrl}
+            numberOfLines={2}
             style={styles.imageInput}
             placeholder="Image url(Optional)"
           />
@@ -86,11 +94,14 @@ const styles = StyleSheet.create({
   },
   tweetInput: {
     fontSize: 20,
-    // backgroundColor: "yellow",
+    backgroundColor: "yellow",
+    // marginVertical: 0
     // alignItems: "flex-start",
     // padding: 5
     // height: 100,
     // maxHeight: 300,
   },
-  imgeInput: {},
+  imageInput: {
+    // backgroundColor: "blue",
+  },
 });
