@@ -7,14 +7,17 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081’"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
+    "axios": "^0.27.2",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
+    "moment": "^2.29.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
