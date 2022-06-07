@@ -1,12 +1,12 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Entypo, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
-import Colors from "../constants/Colors";
-import useColorScheme from "../hooks/useColorScheme";
-import HomeScreen from "../screen/HomeScreen";
-import SearchScreen from "../screen/SearchScreen";
-import NotificationScreen from "../screen/NotificationScreen";
-import MessagesScreen from "../screen/MessagesScreen";
-import ProfilePicture from "../components/ProfilePicture/ProfilePicture";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Entypo, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import Colors from '../constants/Colors';
+import useColorScheme from '../hooks/useColorScheme';
+import HomeScreen from '../screen/HomeScreen';
+import SearchScreen from '../screen/SearchScreen';
+import NotificationScreen from '../screen/NotificationScreen';
+import MessagesScreen from '../screen/MessagesScreen';
+import ProfilePicture from '../components/ProfilePicture/ProfilePicture';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -26,7 +26,7 @@ export default function BottomTabNavigation() {
           headerTitle: () => (
             <Ionicons name="logo-twitter" size={30} color={Colors.light.tint} />
           ),
-          headerTitleAlign: "center",
+          headerTitleAlign: 'center',
           headerLeftContainerStyle: {
             marginLeft: 15,
           },
