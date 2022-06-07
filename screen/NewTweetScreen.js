@@ -5,32 +5,35 @@ import {
   SafeAreaView,
   StatusBar,
   TextInput,
-} from "react-native";
-import React, { useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { AntDesign } from "@expo/vector-icons";
-import Colors from "../constants/Colors";
-import { TouchableOpacity } from "react-native";
-import ProfilePicture from "../components/ProfilePicture";
+} from 'react-native';
+import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { AntDesign } from '@expo/vector-icons';
+import Colors from '../constants/Colors';
+import { TouchableOpacity } from 'react-native';
+import ProfilePicture from '../components/ProfilePicture';
 
 const NewTweetScreen = () => {
-  const [tweet, setTweet] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [tweet, setTweet] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
 
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
-  const onPostTweet = () => {
-    console.warn(`Posting ${tweet} and image ${imageUrl}`);
-  };
+  const onPostTweet = () => {};
 
   const onClose = () => {
-    navigation.goBack()
-  }
+    navigation.goBack();
+  };
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
-        <AntDesign name="close" size={30} color={Colors.light.tint} onPress={onClose} />
+        <AntDesign
+          name="close"
+          size={30}
+          color={Colors.light.tint}
+          onPress={onClose}
+        />
         <TouchableOpacity style={styles.button} onPress={onPostTweet}>
           <Text style={styles.buttonText}>Tweet</Text>
         </TouchableOpacity>
@@ -64,13 +67,13 @@ export default NewTweetScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
     marginTop: StatusBar.currentHeight,
   },
   headerContainer: {
-    width: "100%",
-    flexDirection: "row",
-    justifyContent: "space-between",
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     padding: 15,
   },
   button: {
@@ -80,12 +83,12 @@ const styles = StyleSheet.create({
   buttonText: {
     paddingVertical: 10,
     paddingHorizontal: 20,
-    color: "white",
-    fontWeight: "bold",
+    color: 'white',
+    fontWeight: 'bold',
     fontSize: 16,
   },
   newTweetContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     padding: 15,
   },
   inputContainer: {
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
   },
   tweetInput: {
     fontSize: 20,
-    backgroundColor: "yellow",
+    backgroundColor: 'yellow',
     // marginVertical: 0
     // alignItems: "flex-start",
     // padding: 5

@@ -25,7 +25,7 @@ const MainContainer = ({ tweet }) => {
 
       {/* content */}
       <View style={styles.contentcontainer}>
-        <Text style={styles.content}>{tweet.content}</Text>
+        <Text style={styles.content}>{tweet.text}</Text>
         {!!tweet.image && <Image style={styles.image} source={{ uri: tweet.image }} />}
       </View>
 

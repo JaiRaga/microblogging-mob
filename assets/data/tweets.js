@@ -7,7 +7,7 @@ const tweets = [
       name: "Raga Jai Santhosh",
       image: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg",
     },
-    createdAt: "2020-08-27T12:00:00.000Z",
+    createdAt: "2022-02-27T12:00:00.000Z",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     image:
@@ -24,7 +24,7 @@ const tweets = [
       name: "Raga Jai Santhosh",
       image: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg",
     },
-    createdAt: "2020-08-27T12:00:00.000Z",
+    createdAt: "2022-04-28T12:00:00.000Z",
     content:
       "Hey Hey Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     numberOfComments: 4,
@@ -59,6 +59,23 @@ const tweets = [
     numberOfComments: 4,
     numberOfRetweets: 11,
     numberOfLikes: 99,
+  },
+  {
+    id: "t5",
+    user: {
+      id: "u1",
+      username: "JaiRaga",
+      name: "Raga Jai Santhosh",
+      image: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg",
+    },
+    createdAt: "2022-02-27T12:00:00.000Z",
+    content:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    image:
+      "https://i.insider.com/5d03aa8e6fc9201bc7002b43?width=1136&format=jpeg",
+    numberOfComments: 123,
+    numberOfRetweets: 11,
+    numberOfLikes: 10,
   },
 ];
 

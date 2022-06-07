@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { Feather, EvilIcons, AntDesign } from "@expo/vector-icons";
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Feather, EvilIcons, AntDesign } from '@expo/vector-icons';
 
 const Footer = ({ tweet }) => {
   return (
@@ -28,19 +28,19 @@ export default Footer;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 5
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 5,
     // backgroundColor: "yellow"
   },
   iconContainer: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     // backgroundColor: "yellow"
   },
   numbers: {
-    color: "grey",
+    color: 'grey',
     marginLeft: 5,
-    textAlign: "center"
+    textAlign: 'center',
   },
 });
